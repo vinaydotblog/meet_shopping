@@ -138,3 +138,7 @@ input.small {
 	font-size: 1.3em;
 	margin-right: 15px;
 }
+table.table td,table.table th {
+	padding: 10px;
+	text-align: left;
+}

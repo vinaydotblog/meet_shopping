@@ -35,6 +35,7 @@ session_start();
 
 $ii=0;
 $sql = "SELECT * FROM p_order WHERE p_regid=".$_SESSION['UserID']." AND o_status='pending'";
+echo $sql;
 $result = mysql_query($sql) or die("Error in query2");
 $num_return = mysql_num_rows($result);
 while ($row4 = mysql_fetch_object($result))
