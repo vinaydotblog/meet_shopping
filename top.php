@@ -11,3 +11,20 @@
 <td><img src="images/fff.jpg" width="100%" height="160"></td>
 </tr>
 </table>
+<p class="top_links">
+	<?php 
+		session_start();
+		// print_r($_SESSION);
+
+		$sql = "SELECT * FROM p_order WHERE p_regid=".$_SESSION['UserID']." AND o_status='pending'";
+		$result = mysql_query($sql) or die("Error in query2");
+		$no_of_items_in_cart = mysql_num_rows($result);
+	?>
+	<a class="cart" href="#"><img src="images/jjj.jpg" width="20" height="20" alt=""><?php echo $no_of_items_in_cart; ?> Items</a>
+
+	<?php if(isset($_SESSION['IsUserName']) && $_SESSION['IsUserName']): ?>
+		<a href="#"><?php echo $_SESSION['IsUserName']; ?></a><a href="logout.php">( Logout )</a>
+	<?php else: ?>
+		<a href="login.php">Login / Register</a>
+	<?php endif; ?>
+</p>

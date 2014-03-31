@@ -6,8 +6,8 @@ error_reporting(E_ALL & ~E_NOTICE);
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Shopping</title>
-<LINK href="images/style.css" type=text/css rel=stylesheet>
-<LINK rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link href="images/style.css" type=text/css rel=stylesheet>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <script language="JavaScript">
 <!--
 function fvalid(form2)

@@ -134,3 +134,7 @@ input.small {
 	width: 50px;
 }
 
+.top_links a {
+	font-size: 1.3em;
+	margin-right: 15px;
+}
