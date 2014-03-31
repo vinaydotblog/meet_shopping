@@ -16,11 +16,15 @@
 		session_start();
 		// print_r($_SESSION);
 
-		$sql = "SELECT * FROM p_order WHERE p_regid=".$_SESSION['UserID']." AND o_status='pending'";
-		$result = mysql_query($sql) or die("Error in query2");
-		$no_of_items_in_cart = mysql_num_rows($result);
+		if(isset($_SESSION['UserID']) && $_SESSION['UserID']) {
+			$sql = "SELECT * FROM p_order WHERE p_regid=".$_SESSION['UserID']." AND o_status='pending'";
+			$result = mysql_query($sql) or die("Error in query2");
+			$no_of_items_in_cart = mysql_num_rows($result);			
+		} else {
+			$no_of_items_in_cart = 0;
+		}
 	?>
-	<a class="cart" href="#"><img src="images/jjj.jpg" width="20" height="20" alt=""><?php echo $no_of_items_in_cart; ?> Items</a>
+	<a class="cart" href="prod_buy.php"><img src="images/jjj.jpg" width="20" height="20" alt=""> <?php echo $no_of_items_in_cart; ?> Item(s)</a>
 
 	<?php if(isset($_SESSION['IsUserName']) && $_SESSION['IsUserName']): ?>
 		<a href="#"><?php echo $_SESSION['IsUserName']; ?></a><a href="logout.php">( Logout )</a>
