@@ -43,7 +43,7 @@ $result = mysql_query($sql) or die("Error in query2");
 		      	<td><a target="_blank" href="prod_detail.php?id=<?php echo $row['p_prod_id']; ?>"><?php echo $row['p_prod_name']; ?></a></td>
 		      	<td><?php echo $row['p_ord_date']; ?></td>
 		      	<td><?php echo $row['p_qty']; ?></td>
-		      	<td>Rs. <?php echo  money_format('%i', $row['p_totalamt']); ?></td>
+		      	<td>Rs. <?php echo number_format($row['p_totalamt'], 2, ',', ' '); ?></td>
 		      </tr>
 			<?php endwhile; ?>
 	      </table>

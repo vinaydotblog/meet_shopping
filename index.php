@@ -26,7 +26,7 @@ error_reporting(E_ALL & ~E_NOTICE);
 				$i=0;
 				while($row=mysql_fetch_array($result))
 				{?>
-      <td>          	<img class= 'prodimg' src="admin/p_images/<?php echo $row['p_img']; ?>" /><br />
+      <td class="product">          	<img class= 'prodimg' src="admin/p_images/<?php echo $row['p_img']; ?>" /><br />
          <a href='prod_detail.php?id=<?php echo $row['p_prod_id'] ?>' ><?php echo $row['p_prod_name']; ?></a>
           </td>
           <?php $i++;

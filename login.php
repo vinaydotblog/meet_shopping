@@ -45,11 +45,11 @@ if ($_REQUEST['err']==1)
 echo "<font color='red'>Wrong Details!</font><br>";
 }
 ?>Existing Users Login here
-	<table width="70%" border="0" cellpadding="4" cellspacing="3" bordercolor="#000000" style="border: 1px dashed #000;">
+	<table class="form" width="70%" border="0" cellpadding="4" cellspacing="3" bordercolor="#000000" >
         <form name="form2" method="post" action="signin.php" onSubmit="return fvalid(form2)">
           <tr> 
             <td>Email ID</td>
-            <td><input name="username" style="width: 200px" value="" autocomplete="off"></td>
+            <td><input type="text" name="username" style="width: 200px" value="" autocomplete="off"></td>
           </tr>
           <tr> 
             <td>Password</td>
@@ -72,7 +72,7 @@ if ($_REQUEST['msg']==2)
 echo "<font color='red'>You have been Successfully Registered</font><br>";
 }
 ?><strong>New users register here</strong> 
-      <table width="70%" border="0" cellpadding="4" cellspacing="3" bordercolor="#000000" style="border: 1px dashed #000;">
+      <table class="form" width="70%" border="0" cellpadding="4" cellspacing="3" bordercolor="#000000">
         <form name="form1" id="form1" method="post" action="cust_reg1.php">
           <tr valign="top"> 
             <td>First Name</td>

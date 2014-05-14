@@ -29,7 +29,7 @@ $v=$_REQUEST['p_cat_id'];
 				$i=0;
 				while($row4=mysql_fetch_array($query4))
 				{?>
-      <td align="center"><a href='prod_detail.php?id=<?php echo $row4['p_prod_id'];?>&p_sub_id=<?php echo $row4['p_sub_id'];?>&p_cat_id=<?php echo $row4['p_cat_id'];?>' style="text-decoration: none"><img border="0" class= 'prodimg' src="admin/p_images/<?php echo $row4['p_img']; ?>" /><br /><?php echo $row4['p_prod_name']."<br>"; 
+      <td class="product" align="center"><a href='prod_detail.php?id=<?php echo $row4['p_prod_id'];?>&p_sub_id=<?php echo $row4['p_sub_id'];?>&p_cat_id=<?php echo $row4['p_cat_id'];?>' style="text-decoration: none"><img border="0" class= 'prodimg' src="admin/p_images/<?php echo $row4['p_img']; ?>" /><br /><?php echo $row4['p_prod_name']."<br>"; 
 	  echo "<strike>Rs. ". $row4['p_prod_mp']."</strike>&nbsp;&nbsp;&nbsp; <strike>Rs. ".$row4['p_prod_sp']."</strike>&nbsp;&nbsp;&nbsp; Rs.".$row4['p_prod_dp'];?> </a>	
           </td>
           <?php $i++;

@@ -27,8 +27,8 @@
 	<a class="cart" href="prod_buy.php"><img src="images/jjj.jpg" width="20" height="20" alt=""> <?php echo $no_of_items_in_cart; ?> Item(s)</a>
 
 	<?php if(isset($_SESSION['IsUserName']) && $_SESSION['IsUserName']): ?>
-		<a href="review_orders.php"><?php echo $_SESSION['IsUserName']; ?></a><a href="logout.php">( Logout )</a>
+		<a class="btn-instagram"  href="review_orders.php"><?php echo $_SESSION['IsUserName']; ?></a><a href="logout.php">( Logout )</a>
 	<?php else: ?>
-		<a href="login.php">Login / Register</a>
+		<a class="btn-instagram" href="login.php">Login / Register</a>
 	<?php endif; ?>
 </p>

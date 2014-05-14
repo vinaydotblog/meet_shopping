@@ -3,19 +3,22 @@ error_reporting(E_ALL & ~E_NOTICE);
 ?>
 <script type="text/javascript">
 function openDiv(val){
-	if(document.getElementById(val).style.display=='inline')
+  var elem = document.getElementById(val);
+	if(elem.style.display=='block')
 		{
-			document.getElementById(val).style.display='none'
+			elem.style.display='none'
 		}
 	else
 	{
-		document.getElementById(val).style.display='inline'
+		elem.style.display='block';
+
+
 	}
 //alert (val);
 }</script>
-<table width="100%" border="1" cellpadding="3" cellspacing="0" bordercolor="#CCCCCC" style="border-collapse: collapse">
+<table style="min-width: 200px;" border="1" cellpadding="3" cellspacing="0" bordercolor="#CCCCCC" style="border-collapse: collapse">
   <tr> 
-    <td><strong><font color="#CC0033">Categories</a></font></strong></td>
+    <td><div style="color:#CC0033; text-align: center; font-weight: bold;">Categories</div></td>
   </tr>
 <?php
 $query=mysql_query("SELECT * FROM p_category");
@@ -24,8 +27,8 @@ while($row=mysql_fetch_array($query))
 $v=$row['p_cat_id'];
 ?>
 <tr> 
-<td><span id="wtg<?php echo $row['p_cat_id']?>" style="cursor:pointer;" onclick="openDiv('wt<?php echo $row['p_cat_id']?>')"><?php echo $row['p_cat_name'];?></span> 
-      <div style="display:none" id="wt<?php echo $row['p_cat_id'];?>"> 
+<td><span class="acc_head" id="wtg<?php echo $row['p_cat_id']?>" style="cursor:pointer;" onclick="openDiv('wt<?php echo $row['p_cat_id']?>')"><?php echo $row['p_cat_name'];?></span> 
+      <div style="display:none" class="acc_con" id="wt<?php echo $row['p_cat_id'];?>"> 
         <table border="0" cellpadding="0" cellspacing="0">
           <?php
 $query1=mysql_query("SELECT * FROM p_sub_cat WHERE p_cat_id=".$row['p_cat_id']." ORDER BY p_sub_id");
