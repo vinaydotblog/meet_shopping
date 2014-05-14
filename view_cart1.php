@@ -21,13 +21,12 @@ include 'db.php';
         <td width="50%"><strong><font color="#6699FF">Customer Info</font></strong></td>
       </tr>
       <tr> 
-        <td><table width="100%" border="0" cellpadding="0" style="border: 1px solid #000000" cellspacing="0">
+        <td><table class="fancy" width="100%" border="0" cellpadding="0" style="border: 1px solid #000000" cellspacing="0">
             <tr> 
-              <td width="70%" align="left" style="padding: 3px"><font color="#333333">Name</font></td>
-              <td width="10%" align="center" style="padding: 3px"><font color="#333333">Price</font></td>
-              <td width="10%" align="center" style="padding: 3px"><font color="#333333">Qty</font></td>
-              <td width="10%" align="center" nowrap="nowrap" style="padding: 3px"><font color="#333333">Sub 
-                Total</font></td>
+              <th width="70%" align="left" style="padding: 3px">Name</th>
+              <th width="10%" align="center" style="padding: 3px">Price</th>
+              <th width="10%" align="center" style="padding: 3px">Qty</th>
+              <th width="10%" align="center" nowrap="nowrap" style="padding: 3px">Sub                Total</th>
             </tr>
             <?php
 session_start();
